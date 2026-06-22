@@ -599,6 +599,100 @@
     color: #6c7287;
   }
 
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+  .project-card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .project-card:hover { border-color: rgba(47,92,255,0.4); transform: translateY(-4px); }
+  .project-card-top {
+    padding: 28px 28px 0;
+  }
+  .project-tag-row { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+  .project-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 100px;
+    padding: 4px 12px;
+  }
+  .tag-blue { background: rgba(47,92,255,0.15); color: var(--accent2); border: 1px solid rgba(47,92,255,0.25); }
+  .tag-green { background: rgba(70,214,160,0.12); color: #46d6a0; border: 1px solid rgba(70,214,160,0.2); }
+  .tag-grey { background: rgba(255,255,255,0.06); color: #9aa0b2; border: 1px solid rgba(255,255,255,0.1); }
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .project-tagline { font-size: 15px; color: #9aa0b2; line-height: 1.55; margin-bottom: 22px; }
+  .project-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .project-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #c2c7d4;
+    line-height: 1.5;
+  }
+  .feat-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(47,92,255,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .project-card-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .project-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .price-amount {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #46d6a0;
+  }
+  .price-period { font-size: 13px; color: #7a8096; }
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(47,92,255,0.35);
+    transition: background 0.2s;
+  }
+  .project-link:hover { background: var(--accent2); }
+
   /* WHY BLUNE */
   .why-grid {
     display: grid;
@@ -1096,6 +1190,69 @@
           <div class="why-title">Built for your world.</div>
           <div class="why-body">UK built. Africa ready. We understand the markets we work in because we're from them.</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-bordered">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Our Projects
+        </div>
+        <h2>What we've been building.</h2>
+        <p class="section-sub">Real products built by Blune — solving real problems for real businesses.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- VisitFlow -->
+        <div class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-tag-row">
+              <span class="project-tag tag-blue">Live</span>
+              <span class="project-tag tag-green">UK Built</span>
+              <span class="project-tag tag-grey">Visitor Management</span>
+            </div>
+            <div class="project-title">VisitFlow</div>
+            <p class="project-tagline">Your paper sign-in book just became obsolete. Visitors scan a QR code, watch a Health &amp; Safety briefing, and are signed in — all in under 60 seconds.</p>
+            <div class="project-features">
+              <div class="project-feature">
+                <span class="feat-check">
+                  <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg>
+                </span>
+                QR code at the door — no app download, no iPad needed
+              </div>
+              <div class="project-feature">
+                <span class="feat-check">
+                  <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg>
+                </span>
+                Built-in H&amp;S video briefing with logged compliance checkbox
+              </div>
+              <div class="project-feature">
+                <span class="feat-check">
+                  <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg>
+                </span>
+                Instant email &amp; SMS alert to reception — live dashboard of everyone on site
+              </div>
+              <div class="project-feature">
+                <span class="feat-check">
+                  <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg>
+                </span>
+                GDPR-compliant — UK-hosted, 90-day auto-delete, CSV export for audits
+              </div>
+            </div>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-price">
+              <span class="price-amount">£5</span>
+              <span class="price-period">/ month — vs. £55–£169 for competitors</span>
+            </div>
+            <a href="https://visitflow-production.up.railway.app/landing.html" target="_blank" rel="noopener" class="project-link">View Project →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
